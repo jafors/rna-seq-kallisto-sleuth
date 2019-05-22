@@ -5,8 +5,10 @@ units: units.tsv
 adapter: ACGGATCGATCGATCGATCGAT
 
 ref:
-  transcriptome: "data/ref/transcriptome.chr21.fa"
+  transcriptome: "data/ref/hg38.fa"
   species: hsapiens
+# gtf file for fusion detection
+  gtf: "data/ref/hg38.gtf"
 
 pca:
   labels:
@@ -21,6 +23,7 @@ diffexp:
     by-condition: ~condition
 
 params:
+  pizzly: ""
   kallisto: "-b 100"
   cutadapt-se: ""
   cutadapt-pe: ""
